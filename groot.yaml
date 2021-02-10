@@ -1,0 +1,11 @@
+- hosts: web
+  tasks:
+    - name: install apache
+      apt:
+         name: apache2
+         state: present
+    - name: copy  file
+      copy:
+         src: text.html
+         dest: /var/www/html/index.html
+
